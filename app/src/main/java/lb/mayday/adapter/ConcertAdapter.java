@@ -13,6 +13,7 @@ import java.util.List;
 
 import lb.mayday.R;
 import lb.mayday.bean.Concert;
+import lb.mayday.util.OpenActivity;
 
 /**
  * Created by LB on 2017/7/20.
@@ -37,7 +38,7 @@ public class ConcertAdapter extends RecyclerView.Adapter <ConcertAdapter.MyViewH
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Concert curConcert = mDatas.get(position);
+        final Concert curConcert = mDatas.get(position);
         holder.mTvName.setText(curConcert.getName());
         holder.mTvAddress.setText(curConcert.getAddress());
         holder.mTvNum.setText(curConcert.getNum().toString()+"人要去");
@@ -46,6 +47,15 @@ public class ConcertAdapter extends RecyclerView.Adapter <ConcertAdapter.MyViewH
         if(curConcert.getEnd()) {
             holder.mRlItem.setBackgroundColor(mContext.getResources().getColor(R.color.itemEnd));
         }
+
+        //holder Item点击
+        holder.mRlItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(mContext,curConcert.getName(),Toast.LENGTH_SHORT).show();
+                OpenActivity.showConcertDetail(mContext,curConcert.getObjectId());
+            }
+        });
     }
 
 

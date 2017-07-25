@@ -8,8 +8,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        findViewById();
     }
 
-    protected abstract void findViewById();
+    protected abstract void initControls();
 }

@@ -3,4 +3,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- concert相关  -->
+    <array name="tab_concert_discuss">
+        <item>讨论</item>
+        <item>热门</item>
+    </array>
+
+    <string name="action_settings">设置</string>
 </resources>

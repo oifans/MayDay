@@ -6,5 +6,5 @@ package lb.mayday;
  */
 public class Constants {
     //Bmob相关
-    public final static String BmobAppId = "7fd2c10a258db8d8309c09aea23501b3";
+    public final static String BmobAppId = "";
 }
