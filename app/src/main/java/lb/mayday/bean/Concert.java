@@ -10,6 +10,9 @@ import cn.bmob.v3.datatype.BmobFile;
  */
 
 public class Concert extends BmobObject {
+    //演唱会类型
+    public static final int TYPE_CONCERT = 1;
+
     //活动名字
     private String name;
     //地址
@@ -24,10 +27,8 @@ public class Concert extends BmobObject {
     private BmobDate date;
     //活动类型
     private Integer type;
-
-    //演唱会类型
-    public static final Integer TYPE_CONCERT = 1;
-
+    //活动介绍内容
+    private String content;
 
     public Integer getType() {
         return type;
@@ -84,5 +85,14 @@ public class Concert extends BmobObject {
     public void setDate(BmobDate date) {
         this.date = date;
     }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
 
 }

@@ -29,6 +29,10 @@ public class ConcertAdapter extends RecyclerView.Adapter <ConcertAdapter.MyViewH
         this.mContext = mContext;
     }
 
+    public void setmDatas(List<Concert> mDatas) {
+        this.mDatas = mDatas;
+    }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_concert, parent, false);
@@ -53,7 +57,7 @@ public class ConcertAdapter extends RecyclerView.Adapter <ConcertAdapter.MyViewH
             @Override
             public void onClick(View view) {
 //                Toast.makeText(mContext,curConcert.getName(),Toast.LENGTH_SHORT).show();
-                OpenActivity.showConcertDetail(mContext,curConcert.getObjectId());
+                OpenActivity.showConcertDetail(mContext,curConcert);
             }
         });
     }
